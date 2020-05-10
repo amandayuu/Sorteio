@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta>
+        <title>SORTEIO</title>
+    </head>
+    <body>
+        <input type="string" name="Minimo" id="min">
+        <input type="string" name="Maximo" id="max">
+        <button onclick=sorteio()>Sorteio</button>
+        <p id="resultado"></p>       
+    </body>    
+    <script>
+        function sorteio(){
+            const min = document.getElementById("min").value;
+            const max = document.getElementById("max").value;
+
+            const sort = Math.floor((1+Math.random() * max) + min); 
+
+            document.getElementById("resultado").innerHTML=sort;
+
+        }
+    </script>
+    
+</html>
